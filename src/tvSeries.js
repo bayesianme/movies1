@@ -3,7 +3,7 @@ import Logo from './components/logo';
 import LogoMovies from './components/logoMovies';
 import QuickSearch from './components/quickSearch';
 import Navigation from './components/navigation';
-import MovieNumber from './components/movieNumber';
+import MovieSections from './components/movieSections';
 import PosterRaya from './components/poster';
 import TitleRusRaya from './components/titleRus';
 import TitleEngRaya from './components/titleEng';
@@ -21,6 +21,8 @@ import SearchMovies from './components/searchMovies';
 import Filter from './components/filter';
 import TVSeriesHeading from './components/tvSeriesHeading';
 
+import arrayData from './components/arrayData';
+
 const TVSeries = () => {
   return (
     <div>
@@ -35,38 +37,8 @@ const TVSeries = () => {
           <TVSeriesHeading/>
           <SearchMovies/>
           <Filter/>
-          <section>
-            <MovieNumber/>
-            <PosterRaya/>
-            <div>
-              <TitleRusRaya/>
-              <TitleEngRaya/>
-              <GenresRaya/>
-              <DescriptionRaya/>
-            </div> 
-            <WatchlistButton/>
-            <RaitingButton/>
-            <Raiting/>
-          </section>
+          <MovieSections elements = {arrayData}/>
         </div>
-        <DownloadButton/>
-        <Rule/>
-        <div>
-          <section>
-            <MovieNumber/>
-            <PosterRaya/>
-            <div>
-              <TitleRusRaya/>
-              <TitleEngRaya/>
-              <GenresRaya/>
-              <DescriptionRaya/>
-            </div> 
-            <WatchlistButton/>
-            <RaitingButton/>
-            <Raiting/>
-          </section>
-        </div>
-        <DownloadButton/>
       </main>
       <footer>
         <Icons/>

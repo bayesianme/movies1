@@ -1,6 +1,6 @@
 import React from 'react';
 import BestMoviesHeading from './bestMoviesHeading';
-import MovieNumber from './movieNumber';
+import MovieSectionsWatchlist from './movieSectionsWatchlist';
 import PosterRaya from './poster';
 import TitleRusRaya from './titleRus';
 import TitleEngRaya from './titleEng';
@@ -12,42 +12,14 @@ import RaitingButton from './raitingButton';
 import Raiting from './raiting';
 import Rule from './rule';
 
+import arrayData from './arrayData';
+
 const Watchlist = () => {
     return (
-        <div>
           <div>
             <h3 className = "watchlistHeading">Хочу посмотреть</h3>
-            <section>
-              <MovieNumber/>
-              <PosterRaya/>
-              <div>
-                <TitleRusRaya/>
-                <TitleEngRaya/>
-                <GenresRaya/>
-                <DescriptionRaya/>
-              </div> 
-              <WatchlistButtonActive/>
-              <RaitingButton/>
-              <Raiting/>
-            </section>
+            <MovieSectionsWatchlist elements = {arrayData}/>
           </div>
-          <DownloadButton/>
-          <Rule/>
-          <section>
-              <MovieNumber/>
-              <PosterRaya/>
-              <div>
-                <TitleRusRaya/>
-                <TitleEngRaya/>
-                <GenresRaya/>
-                <DescriptionRaya/>
-              </div> 
-              <WatchlistButtonActive/>
-              <RaitingButton/>
-              <Raiting/>
-            </section>
-            <DownloadButton/>
-        </div>
     )
   };
   

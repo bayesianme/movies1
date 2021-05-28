@@ -4,7 +4,7 @@ import LogoMovies from './components/logoMovies';
 import QuickSearch from './components/quickSearch';
 import Navigation from './components/navigation';
 import BestMoviesHeading from './components/bestMoviesHeading';
-import MovieNumber from './components/movieNumber';
+import MovieSections from './components/movieSections';
 import PosterRaya from './components/poster';
 import TitleRusRaya from './components/titleRus';
 import TitleEngRaya from './components/titleEng';
@@ -17,6 +17,8 @@ import Raiting from './components/raiting';
 import Rule from './components/rule';
 import Icons from './components/icons';
 import MoviesFooter from './components/moviesFooter';
+import arrayData from './components/arrayData';
+
 
 const Home = () => {
   return (
@@ -30,38 +32,8 @@ const Home = () => {
       <main>
         <div>
           <BestMoviesHeading/>
-          <section>
-            <MovieNumber/>
-            <PosterRaya/>
-            <div>
-              <TitleRusRaya/>
-              <TitleEngRaya/>
-              <GenresRaya/>
-              <DescriptionRaya/>
-            </div> 
-            <WatchlistButton/>
-            <RaitingButton/>
-            <Raiting/>
-          </section>
+          <MovieSections elements = {arrayData}/>
         </div>
-        <DownloadButton/>
-        <Rule/>
-        <div>
-          <section>
-            <MovieNumber/>
-            <PosterRaya/>
-            <div>
-              <TitleRusRaya/>
-              <TitleEngRaya/>
-              <GenresRaya/>
-              <DescriptionRaya/>
-            </div> 
-            <WatchlistButton/>
-            <RaitingButton/>
-            <Raiting/>
-          </section>
-        </div>
-        <DownloadButton/>
       </main>
       <footer>
         <Icons/>

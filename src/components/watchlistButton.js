@@ -1,7 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const WatchlistButton = () => {
-    return <button className = "watchlistButton">Хочу посмотреть</button>
+export default class WatchlistButton extends Component {
+
+  state = {buttonActive:false};
+
+  onButtonClick = () => {
+    this.setState (( {buttonActive}) => {
+      return ({buttonActive : !buttonActive}
+      );
+    });
   };
 
-  export default WatchlistButton;
+
+  render () {
+    const {buttonActive} = this.state;
+    let classNames = 'watchlistButton';
+    if (buttonActive) {
+      classNames += ' buttonActive watchlistButtonDN';
+    }
+    return (
+    <button className = {classNames}
+    onClick = {this.onButtonClick}><span>Хочу посмотреть</span></button>
+    );
+  }
+   
+  
+}
+
+
+
+  //export default WatchlistButton;
